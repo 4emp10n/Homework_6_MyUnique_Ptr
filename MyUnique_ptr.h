@@ -10,7 +10,7 @@ class MyUnique_ptr
     MyUnique_ptr(MyUnique_ptr& uptr) = delete;
     MyUnique_ptr(MyUnique_ptr&& uptr);
     T*operator ->(){ return this->m_ptr;}
-    T& operator*() { return *(this->ptr);}
+    T& operator*() { return *(this->m_ptr);}
     ~MyUnique_ptr()
     {
         if ( m_ptr != nullptr)
@@ -19,3 +19,4 @@ class MyUnique_ptr
         }
     }
 };
+
