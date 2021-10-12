@@ -9,6 +9,6 @@ class MyUnique_ptr
     explicit MyUnique_ptr(T* ptr = nullptr): m_ptr(ptr){}
     MyUnique_ptr(MyUnique_ptr& uptr) = delete;
     MyUnique_ptr(MyUnique_ptr&& uptr);
-
-
+    T*operator ->(){ return this->m_ptr;}
+    T& operator*() { return *(this->ptr);}
 };
